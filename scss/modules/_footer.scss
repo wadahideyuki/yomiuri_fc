@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+.l{
+    &-footer{
+        text-align: center;
+        font-size: 12px;
+        @include sp {
+            @include vw(20);
+        }
+        &__menuArea {
+            margin: auto;
+            background-color: #e4ddcd;
+            @include sp {
+                background-color: #fff;
+            }
+        }
+        &__menuList {
+            display: block;
+            width: 1000px;
+            margin: 0 auto;
+            @include sp {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                 border-bottom: 1px solid #999;
+                text-align: center;
+            }
+        }
+        &__menu {
+            display: inline-block;
+            @include sp {
+                display: block;
+                width: 50%;
+                border-top: 1px solid #999;
+                &:nth-child(odd) {
+                    border-right: 1px solid #999;
+                }
+            }
+            a {
+                display: block;
+                padding: 20px;
+                font-weight: bold;
+                @include sp {
+                    padding: (35/375*100%) 0;
+                    @include vw(20);
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__snsArea {
+            padding: 35px 0;
+            background-color: #e6e6e6;
+            @include sp {
+                padding: (60/750*100%) 0 (40/750*100%);
+            }
+        }
+        &__snsList {
+            width: 184px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 30px;
+            @include sp {
+                width: 528/750*100%;
+                margin-bottom: (40/750*100%);
+            }
+        }
+        &__snslink {
+            width: 37px;
+            @include sp{
+                width: 111/528*100%;
+            }
+            img{
+                width: 100%;
+            }
+            @include sp {
+                margin: 0 0;
+            }
+            a {
+                display: block;
+                transition: transform .5s;
+                &:hover {
+                    transform: rotateY(-360deg);
+                }
+            }
+        }
+        &__logo {
+            width: 1000px;
+            margin: 0 auto;
+            @include sp {
+                width: (190/750*100%);
+                margin: auto;
+            }
+        }
+        &__corporateArea {
+            padding: 10px 0;
+            color: #fff;
+            background-color: $color_key;
+            @include sp {
+                padding: (30/750*100%) 0;
+                color: $color_key;
+                background-color: #e4ddcd;
+            }
+        }
+        &__copyright{
+            width: 1000px;
+            margin: 0 auto;
+            @include sp{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// ページトップに戻る
+.toTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    display: none;
+    @include sp {
+        width: 30%;
+        height: auto;
+        right: 10px;
+        bottom: 10px;
+    }
+}

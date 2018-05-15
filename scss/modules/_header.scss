@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+.l{
+    &-header{
+        background-color: #fff;
+        padding-bottom: 15px;
+        @include sp {
+            padding-bottom: 0;
+        }
+        &__mainArea {
+            width: 1000px;
+            padding: 20px 0 15px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include sp {
+                width: 100%;
+                padding: 20/750*100% 0;
+                box-shadow: 0 0 6px rgba(0,0,0,0.3);
+                position: relative;
+                z-index: 2;
+            }
+            &-right{
+                width: 180px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include sp {
+                    width: 95px;
+                    order:1;
+                }
+            }
+        }
+        &__logo {
+            &-giants{
+                width: 152px;
+                height: 38.52px;
+                @include sp{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @include sp {
+                width: 250/750*100%;
+                order: 3;
+            }
+        }
+        &__logout{
+            width: 110px;
+            background: #bfbfbf;
+            padding: 6px 0;
+            height: 28px;
+            text-align: center;
+            border-radius: 5px;
+            color: #fff;
+            @include sp {
+                display: none;
+            }
+            &:hover{
+                background: #a0a0a0;
+            }
+        }
+        &__menu{
+            width: 40px;
+            cursor: pointer;
+            @include sp{
+                margin-left: 32/180*100%;
+                padding-top: 4.2%;
+                border-right: 1px solid #777;
+                padding-right: 12px;
+            }
+            &-line{
+                width: 33px;
+                height: 3px;
+                background: #000;
+                margin: 0 auto;
+                transition: transform 500ms;
+                @include sp{
+                    width: 28px;
+                    height: 2px;
+                }
+                &.middle{
+                    margin: 8px auto;
+                    @include sp{
+                        margin: 5px auto;
+                    }
+                }
+            }
+            &-txt{
+                font-size: 8px;
+                margin-top: 5px;
+                &-sp{
+                    margin: -5px auto 0;
+                    width:28px;
+                }
+            }
+            &-select{
+                @include sp{
+                    width: 100%;
+                }
+            }
+        }
+        
+        &__goods{//only sp
+            width:22px;
+        }
+        
+        &__menber{
+            @include sp {
+                order: 4;
+                width: 240/750*100%;
+                margin-right: 18/750*100%;
+            }
+            .member{//only sp
+                &__info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include vw(20);
+                    font-weight: bold;
+                    &-mark{
+                        width: 35/215*100%;
+                    }
+                }
+                &__point{
+                    border: 1px solid #767676;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 3px;
+                    padding: 0 5% 1% ;
+                    @include vw(27);
+                    font-weight: bold;
+                    margin-top: 4%;
+                    &-mark{
+                        width: 96/212*100%;
+                        img{
+                            vertical-align: middle;
+                        }
+                    }
+                    span{
+                        display: block;
+                        margin-top: 1%;
+                    }
+                }
+            }
+        }
+        &__menuArea {
+            width: 1000px;
+            margin:0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            @include sp {
+                width: 100%;
+                background: $color_key;
+            }
+            nav{
+                position: relative;
+            }
+            nav span {
+                background:$color_key;
+                height:4px;
+                display:block;
+                position:absolute;
+                left:0;
+                @include sp{
+                    display: none;
+                }
+            }
+        }
+        
+        &__menuList{
+            @include sp{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10/750*100%;
+                border: 0;
+                border-top:5px solid $color_key;
+            }
+            &-link{
+                display: inline-block;
+                width: 122px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                @include sp {
+                    width: 100%;
+                    margin-bottom: 0;
+                    margin-bottom: -1px;
+                    margin-left: -1px;
+                    @include vw(28);
+                    padding: 2% 0;
+                    &.active{
+                        width: 100%;
+                        background: #fff;
+                        border-radius: 6px 6px 0 0;
+                        border: 1px solid #fff;
+                        box-sizing: content-box;
+                        box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+                        a{
+                            color: $color_key;
+                            border: none;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        a{
+                            border-left: none;
+                        }
+                    }
+                }
+                a{
+                    @include pc{
+                        &:hover{
+                            color: $color_key;
+                        }
+                    }
+                    @include sp{
+                        @include vw(26);
+                        display: block;
+                        width: 100%;
+                        border-left: 1px solid #fff;
+                        color: #fff;
+                        letter-spacing: 0.05em;
+                    }
+                }
+            }
+            span {
+                background:#FFF;
+                height:2px;
+                display:block;
+                position:absolute;
+                left:0;
+            }
+        }
+        &__memberInfo {
+            display: flex;
+            align-items: center;
+            @include sp{
+                display: none;
+            }
+            &-name{
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                .member{
+                    &__mark{
+                        width: 53px;
+                    }
+                    &__info{
+                      margin-left: 7px;
+                    }
+                }
+            }
+            &-point{
+                margin-right: 11px;
+                padding: 0 10px;
+                border-left: 1px solid #000;
+                border-right: 1px solid #000;
+                display: flex;
+                padding-top: 7px;
+                .member{
+                    &__point{
+                        margin-right: 5px;
+                        &-ttl{
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
+                        &-txt{
+                            font-size: 18px;
+                            color: $color_key;
+                            font-weight: bold;
+                            text-align: right;
+                        }
+                    }
+                    &__pointLose{
+                        margin-right: 5px;
+                        margin-top: 2px;
+                        &-ttl{
+                            font-size: 9px;
+                            font-weight: bold;
+                        }
+                        &-txt{
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: right;
+                            margin-top: 2.5px;
+                        }
+                    }
+                    &__info{
+                        margin-left: 7px;
+                        margin-top: 2px;
+                    }
+                }
+            }
+            &-num{
+                margin-top: 2px;
+                display: flex;
+                padding-top: 4px;
+                img:nth-child(1){
+                    margin-right: 10px;
+                }
+                .member{
+                    &__num{
+                        margin-right: 10px;
+                        &-ttl{
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
+                        &-txt{
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: right;
+                            margin-top: 3px;
+                        }
+                    }
+                    &__game{
+                        &-ttl{
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
+                        &-txt{
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-align: right;
+                            margin-top: 3px;
+                            letter-spacing: 0.1em;
+                        }
+                    }
+                }
+            }
+        }
+        &__attentionArea {
+            background-color: #000;
+            padding: 15px 0;
+            @include sp {
+                padding: 0 0;
+            }
+        }
+        &__attention {
+            width: 1000px;
+            margin: auto;
+            font-size: 15px;
+            color: $color_key;
+            font-weight: bold;
+            @include sp {
+                width: 100%;
+                @include vw(18);
+                text-align: center;
+                padding: (15/750*100%) 0;
+            }
+        }
+    }
+}

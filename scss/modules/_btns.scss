@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+.m {
+    &-btn {
+        display: inline-block;
+        background-color: #fff;
+        text-align: center;
+        font-size: 12px;
+        color: #595757;
+        border: 1px solid #595757;
+        border-radius: 3px;
+        @include sp {
+            @include vw(24);
+            border-radius: 6px;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 8px 40px;
+            &:after {
+                content: url(#{$img_path}icon/arrow_btn_gray.png);
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translate(0, -50%);
+                transition: all .15s;
+            }
+            @include pc{
+                &:hover {
+                    &:after {
+                        right: 6px;
+                    }
+                }
+            }
+        }
+    }
+    &-btn02{//giants onlineshop
+        background-color: #000;
+        text-align: center;
+        font-size: 12px;
+        color: #595757;
+        border-radius: 5px;
+        @include sp {
+            @include vw(24);
+            border-radius: 6px;
+        }
+        @include pc{
+            &:hover {
+                background-color: #f49c0f;
+            }
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 28px 60px;
+            @include sp{
+                padding: 50/690*100% 80/690*100%;
+            }
+        }
+    }
+    &-btn03{//about point
+        background-color: #fff;
+        text-align: center;
+        font-size: 12px;
+        color: #595757;
+        border: 1px solid #595757;
+        border-radius: 5px;
+        padding: 4px ;
+        @include sp {
+            @include vw(24);
+            border-radius: 6px;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 16px 60px 16px 40px;
+            @include sp{
+                padding: 25/690*100% 90/690*100% 25/690*100% 35/690*100%;
+            }
+            &:after {
+                content: url(#{$img_path}icon/arrow_btn_gray02.png);
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translate(0, -50%);
+                transition: all .15s;
+            }
+            @include pc{
+                &:hover {
+                    &:after {
+                        right: 6px;
+                    }
+                }
+            }
+        }
+    }
+    &-btn04{//ticketsBuy
+        background-color: #f49c00;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 5px #ff8319;
+        width: 380px;
+        margin: 60px auto 0;
+        @include sp {
+            @include vw(34);
+            border-radius: 6px;
+            margin: 90/750*100% auto 0;
+            width: 620/690*100%;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 24px 30px 18px 32px;
+            color: #fff;
+            @include sp{
+                padding: 6.5% 10% 5% 10%;
+            }
+            &:after {
+                content: '';
+                background: url(#{$img_path}icon/arrow_btn_white.png) no-repeat top center;
+                position: absolute;
+                right: 16px;
+                width: 10px;
+                padding-top: 18px;
+                background-size: contain;
+                top: 53%;
+                transform: translate(0, -50%);
+                transition: all .15s;
+                @include sp{
+                    top: 52%;
+                    width: 5%;
+                    padding-top: 5%;
+                }
+            }
+            @include pc{
+                &:hover {
+                    &:after {
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &-btn05{//event
+        background-color: #f49c00;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 5px #ff8319;
+        width: 210px;
+        height: 46px;
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+        @include sp {
+            position: static;
+            @include vw(34);
+            border-radius: 6px;
+            margin: 45/750*100% auto 0;
+            width: 620/690*100%;
+            height: auto;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding:11px 30px 12px 32px;
+            color: #fff;
+            @include sp{
+                padding: 5.5% 10% 4% 10%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background: url(#{$img_path}icon/arrow_btn_white02.png) no-repeat top center;
+                right: 16px;
+                width: 8px;
+                padding-top: 15px;
+                background-size: contain;
+                top: 49%;
+                transform: translate(0, -50%);
+                transition: all .15s;
+                @include sp{
+                    top: 52.5%;
+                    width: 5%;
+                    padding-top: 5%;
+                }
+            }
+            @include pc{
+                &:hover {
+                    &::after {
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    &-btn06 {//SP more read
+            display: block;
+            width: 160px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: auto;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            position: relative;
+            @include sp {
+                width: 230/750*100%;
+                @include vw(24);
+            }
+            a {
+                &::after {
+                    content: url(#{$img_path}icon/arrow_gray_under.png);
+                    @include sp {
+                        position: absolute;
+                        right: 0px;
+                        transition: transform 500ms;
+                    }
+                }
+                &.open{
+                    &::after{
+                        transform: rotateZ(180deg);
+                        transition: transform 500ms;
+                    }
+                }
+            }
+        }
+}
